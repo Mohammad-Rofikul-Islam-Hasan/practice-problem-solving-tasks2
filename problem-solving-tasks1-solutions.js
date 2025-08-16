@@ -112,4 +112,28 @@ function willSuccess(marks) {
   }
 }
 
-console.log(willSuccess([90, 99, 87, 48, 34, 49]));
+// console.log(willSuccess([90, 99, 87, 48, 34, 49]));
+
+// Problem-04: Valid Proposal
+
+function validProposal(person1, person2) {
+  if (typeof person1 !== "object" || typeof person2 !== "object") {
+    return "Invalid";
+  }
+
+  if (
+    Math.abs(person1.age - person2.age) <= 7 &&
+    person1.gender !== person2.gender
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(
+  validProposal(
+    { name: "toya", gender: "female", age: 24 },
+    { name: "bjoy", gender: "male", age: 32 }
+  )
+);
