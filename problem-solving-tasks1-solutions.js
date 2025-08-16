@@ -14,7 +14,7 @@ function multiply(num1, num2) {
 
 const sumOfNumbers = sum(2, 3) + multiply(2, 3);
 
-console.log(sumOfNumbers);
+// console.log(sumOfNumbers);
 
 // Task-2 Solution
 
@@ -33,7 +33,7 @@ function sumOfArray(arr) {
   return sum;
 }
 
-console.log(sumOfArray([3, 7, 8]));
+// console.log(sumOfArray([3, 7, 8]));
 
 // Task-3 solution
 
@@ -56,4 +56,16 @@ function countVowels(str) {
   return vowelCount;
 }
 
-console.log(countVowels("Jhankar miA"));
+// console.log(countVowels("Jhankar miA"));
+
+// Problem-01 : Calculate the cash-out Charge
+
+function cashOut(money) {
+  if (typeof money !== "number") {
+    return "Invalid";
+  }
+
+  return (money * 1.75) / 100;
+}
+
+console.log(cashOut(2000));
