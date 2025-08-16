@@ -61,11 +61,31 @@ function countVowels(str) {
 // Problem-01 : Calculate the cash-out Charge
 
 function cashOut(money) {
-  if (typeof money !== "number") {
+  if (typeof money !== "number" || !money > 0) {
     return "Invalid";
   }
 
   return (money * 1.75) / 100;
 }
 
-console.log(cashOut(2000));
+// console.log(cashOut(2000));
+
+// Problem-02 : Valid Bangladeshi Number
+
+function validContact(contact) {
+  if (typeof contact !== "string") {
+    return "Invalid";
+  }
+
+  if (
+    contact.length === 11 &&
+    !contact.includes(" ") &&
+    contact.startsWith("01")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(validContact("0160008200"));
