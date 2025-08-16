@@ -88,4 +88,28 @@ function validContact(contact) {
   }
 }
 
-console.log(validContact("0160008200"));
+// console.log(validContact("01600008200"));
+
+// Problem-03 : Admission Success (📚 Will He Succeed?)
+
+function willSuccess(marks) {
+  if (!Array.isArray(marks)) {
+    return "Invalid";
+  }
+  let countPass = 0;
+  let countFail = 0;
+  for (const mark of marks) {
+    if (mark >= 50) {
+      countPass++;
+    } else {
+      countFail++;
+    }
+  }
+  if (countPass > countFail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(willSuccess([90, 99, 87, 48, 34, 49]));
