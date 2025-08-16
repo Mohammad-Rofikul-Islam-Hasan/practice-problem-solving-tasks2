@@ -143,18 +143,17 @@ function validProposal(person1, person2) {
 function calculateSleepTime(times) {
   const sleepTime = {};
   let totalSecond = 0;
+  if (!times.length) {
+    return { hour: 0, minute: 0, second: 0 };
+  }
   for (const index of times) {
     if (typeof index !== "number") {
       return "Invalid";
     }
     totalSecond += index;
   }
-  if (!times.length) {
-    return { hour: 0, minute: 0, second: 0 };
-  }
-
-  const hour = parseInt(totalSecond / 3600);
-  const min = parseInt((totalSecond % 3600) / 60);
+  const hour = Math.floor(totalSecond / 3600);
+  const min = Math.floor((totalSecond % 3600) / 60);
   const sec = (totalSecond % 3600) % 60;
 
   sleepTime.hour = hour;
